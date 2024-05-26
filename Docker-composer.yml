@@ -1,0 +1,17 @@
+Version : '3.7'
+
+services:
+  proyectos-monolitico:
+  container_name: proyectos-monolitico
+  image: proyectos-monolitico:v1
+  build:
+    context: .
+    ports :
+      - "4000:4000"
+    dockerfile: Dockerfile
+    networks:
+      - proyectos-monolitico-network
+
+
+networks:
+  proyectos-monolitico-network
